@@ -1,0 +1,20 @@
+{
+  "name": "otus--js4beginners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lliriq77/otus--js4beginners.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lliriq77/otus--js4beginners/issues"
+  },
+  "homepage": "https://github.com/lliriq77/otus--js4beginners#readme"
+}
