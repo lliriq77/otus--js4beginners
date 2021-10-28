@@ -19,5 +19,9 @@
   "homepage": "https://github.com/lliriq77/otus--js4beginners#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1"
   }
 }
