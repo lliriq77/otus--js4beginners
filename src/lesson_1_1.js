@@ -5,5 +5,6 @@ export function sumMul(a, b) {
   const sum = a + b;
 
   const mul = a * b;
+
   return `Сумма = ${sum}; Произведение = ${mul}.`;
 }
