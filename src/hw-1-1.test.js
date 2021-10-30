@@ -1,12 +1,12 @@
 import { countSumMul } from "./hw-1-1";
 
 describe("countSumMul", () => {
-  const {log} = console;
+  const cLog = console.log;
   beforeEach(() => {
     console.log = jest.fn();
   });
   afterAll(() => {
-    console.log = log;
+    console.log = cLog;
   });
 
   it("returns sum and product of a, b", () => {
