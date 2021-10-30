@@ -2,5 +2,5 @@
 Написать программу, которая выведет в консоль
 суммарное количество символов в обоих строках. */
 export function countSymbol(str1, str2) {
-  return (str1 + str2).length;
+  console.log((str1 + str2).length);
 }

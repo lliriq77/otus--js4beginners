@@ -1,8 +1,18 @@
 import { countSymbol } from "./hw-1-2";
 
-describe("counSymbol", () => {
+describe("countSymbol", () => {
+  const {log} = console;
+  beforeEach(() => {
+    console.log = jest.fn();
+  });
+  afterAll(() => {
+    console.log = log;
+  });
+
   it("returns string symbols quantity", () => {
-    expect(countSymbol("", "")).toBe(0);
-    expect(countSymbol("Hello", "world")).toBe(10);
+    countSymbol("", "");
+    expect(console.log).toHaveBeenCalledWith(0);
+    countSymbol("Hello", "world");
+    expect(console.log).toHaveBeenCalledWith(10);
   });
 });

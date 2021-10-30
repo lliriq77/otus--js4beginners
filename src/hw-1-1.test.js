@@ -1,10 +1,22 @@
 import { countSumMul } from "./hw-1-1";
 
 describe("countSumMul", () => {
+  const {log} = console;
+  beforeEach(() => {
+    console.log = jest.fn();
+  });
+  afterAll(() => {
+    console.log = log;
+  });
+
   it("returns sum and product of a, b", () => {
-    expect(countSumMul(1, 2)).toBe("Сумма = 3; Произведение = 2.");
-    expect(countSumMul(17, 9)).toBe("Сумма = 26; Произведение = 153.");
-    expect(countSumMul(0, 0)).toBe("Сумма = 0; Произведение = 0.");
-    expect(countSumMul(10, 0)).toBe("Сумма = 10; Произведение = 0.");
+    countSumMul(1, 2);
+    expect(console.log).toHaveBeenCalledWith("Сумма = 3; Произведение = 2.");
+    countSumMul(17, 9);
+    expect(console.log).toHaveBeenCalledWith("Сумма = 26; Произведение = 153.");
+    countSumMul(0, 0);
+    expect(console.log).toHaveBeenCalledWith("Сумма = 0; Произведение = 0.");
+    countSumMul(10, 0);
+    expect(console.log).toHaveBeenCalledWith("Сумма = 10; Произведение = 0.");
   });
 });
