@@ -9,6 +9,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
+    "no-console": "off",
     "import/prefer-default-export": "off",
     "max-len": [
       "error",
