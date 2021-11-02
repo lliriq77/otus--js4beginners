@@ -51,5 +51,3 @@ export function createInput() {
   button.addEventListener("click", buttonClick);
   document.body.append(el);
 }
-
-createInput();

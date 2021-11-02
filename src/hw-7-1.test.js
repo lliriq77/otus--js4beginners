@@ -1,7 +1,7 @@
 import { createInput } from "./hw-7-1";
 
 describe("createInput", () => {
-  beforeEach(() => {
+  beforeAll(() => {
     createInput();
   });
   it("makes markup", () => {
@@ -14,6 +14,6 @@ describe("createInput", () => {
     document.querySelector("button").click();
     expect(document.querySelector("input").value).toBe("");
     expect(document.querySelector("button").hidden).toBe(true);
-    expect(document.querySelectorAll("p").length).toBe(4);
+    expect(document.querySelectorAll("p")[3].innerHTML).toBe("test");
   });
 });
