@@ -8,30 +8,7 @@
 3.*Если параграфов становится больше 5, первый 
 из них удаляется. */
 
-function buttonShow() {
-  const button = document.querySelector(".button");
-  button.hidden = false;
-}
-
-function buttonClick() {
-  const input = document.querySelector(".input");
-  const button = document.querySelector(".button");
-  button.hidden = true;
-  const div = document.querySelectorAll("div")[1];
-  const newp = document.createElement("p");
-  const allp = document.getElementsByTagName("p");
-  newp.innerHTML = input.value;
-  div.append(newp);
-
-  input.value = "";
-  if (allp.length > 5) {
-    allp[0].remove();
-  }
-}
-
-export function createInput() {
-  const el = document.createElement("div");
-
+export function createInput(el) {
   el.innerHTML = `
 <input class='input'>
 <button class='button'>
@@ -47,7 +24,23 @@ export function createInput() {
   const input = el.querySelector(".input");
   const button = el.querySelector(".button");
   button.hidden = true;
-  input.addEventListener("keydown", buttonShow);
-  button.addEventListener("click", buttonClick);
-  document.body.append(el);
+  input.addEventListener("keydown", () => {
+    // const button = el.querySelector(".button");
+    button.hidden = false;
+  });
+  button.addEventListener("click", () => {
+    // const input = el.querySelector(".input");
+    // const button = el.querySelector(".button");
+    button.hidden = true;
+    const div = el.querySelector("div");
+    const newp = document.createElement("p");
+    const allp = el.getElementsByTagName("p");
+    newp.innerHTML = input.value;
+    div.append(newp);
+
+    input.value = "";
+    if (allp.length > 5) {
+      allp[0].remove();
+    }
+  });
 }
