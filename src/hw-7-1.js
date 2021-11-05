@@ -14,29 +14,23 @@ export function createInput(el) {
 <button class='button'>
     Insert new
 </button>
-<div id='div'>
     <p>First</p>
     <p>Second</p>
     <p>Third</p>
-</div>
 `;
 
   const input = el.querySelector(".input");
   const button = el.querySelector(".button");
   button.hidden = true;
   input.addEventListener("keydown", () => {
-    // const button = el.querySelector(".button");
     button.hidden = false;
   });
   button.addEventListener("click", () => {
-    // const input = el.querySelector(".input");
-    // const button = el.querySelector(".button");
     button.hidden = true;
-    const div = el.querySelector("div");
     const newp = document.createElement("p");
     const allp = el.getElementsByTagName("p");
     newp.innerHTML = input.value;
-    div.append(newp);
+    el.append(newp);
 
     input.value = "";
     if (allp.length > 5) {
