@@ -22,9 +22,10 @@ export function createInput(el) {
   const input = el.querySelector(".input");
   const button = el.querySelector(".button");
   button.hidden = true;
-  input.addEventListener("keydown", () => {
-    button.hidden = false;
-  });
+  input.oninput = () => {
+    if (input.value === "") button.hidden = true;
+    else button.hidden = false;
+  };
   button.addEventListener("click", () => {
     button.hidden = true;
     const newp = document.createElement("p");
