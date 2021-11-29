@@ -8,6 +8,6 @@ export function inputNum() {
     str = window.prompt("Введите 3х-значное число", "123");
   }
 
-  const result = +str[0] + +str[1] + +str[2];
+  const result = Number(str[0]) + Number(str[1]) + Number(str[2]);
   console.log(result);
 }

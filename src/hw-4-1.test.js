@@ -6,7 +6,7 @@ describe("createAdmin", () => {
   });
 
   it("requiers to input age = 30 and returns admin data", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(30);
+    jest.spyOn(window, "prompt").mockReturnValue("30");
     expect(createAdmin()).toBe("user: John, age: 30, role: admin.");
   });
 });

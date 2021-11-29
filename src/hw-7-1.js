@@ -23,8 +23,7 @@ export function createInput(el) {
   const button = el.querySelector(".button");
   button.hidden = true;
   input.oninput = () => {
-    if (input.value === "") button.hidden = true;
-    else button.hidden = false;
+    button.hidden = !input.value;
   };
   button.addEventListener("click", () => {
     button.hidden = true;
