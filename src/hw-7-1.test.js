@@ -28,7 +28,7 @@ describe("createInput", () => {
     expect(button.hidden).toBeFalsy();
   });
   it("limits paragraphs quantity", () => {
-    for (let i = 0; i < 10; i + 1) {
+    for (let i = 0; i < 10; i += 1) {
       button.click();
     }
     expect(el.querySelectorAll("p").length).toBe(5);
